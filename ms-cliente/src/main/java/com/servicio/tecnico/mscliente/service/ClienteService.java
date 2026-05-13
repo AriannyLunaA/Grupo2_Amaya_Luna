@@ -1,12 +1,15 @@
-package com.servicio.tecnico.mscliente.service;
+/package com.servicio.tecnico.mscliente.service;
 
 import com.servicio.tecnico.mscliente.model.Cliente;
 import com.servicio.tecnico.mscliente.repository.ClienteRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+
+
 public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;

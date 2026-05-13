@@ -20,12 +20,12 @@ public class TicketController {
     @GetMapping
 
     public List<Ticket> listarTodos(){
-        return ticketService.obtenerTodos();
+        return ticketService.listarTodos();
     }
 
     //2- Obtener por id(nro ticket) r(URL: GET http://localhost:8081/api/tickets/1)
     @GetMapping("/{id}")
-    public ResponseEntity<Ticket> obtenerPorId(@PathVariable Long id){
+    public ResponseEntity<Ticket> buscarPorId(@PathVariable Long id){
         return ticketService.obtenerPorId(id)
                 .map(ResponseEntity :: ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -34,7 +34,7 @@ public class TicketController {
     //3 Buccar por estado r(URL: GET http://localhost:8081/api/tickets/estado/PENDIENTE)
     @GetMapping("/estado/{estado}")
     public List<Ticket>buscarPorEstado(@PathVariable String estado){
-        return ticketService.obtenerPorEstado(estado);
+        return ticketService.buscarPorEstado(estado);
     }
 
     //4-Crear nuevo ticket r: URL: POST http://localhost:8081/api/tickets

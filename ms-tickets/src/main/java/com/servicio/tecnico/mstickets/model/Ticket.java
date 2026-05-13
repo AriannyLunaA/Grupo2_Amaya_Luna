@@ -19,6 +19,9 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Indica que el ID es autoincremental en MySQL
     private Long id;
 
+    @NotBlank(message = "El rut del cliente es obligatorio")  //Valida que ingrese un rut
+    @Column(nullable = false)
+    private String rut;
     @NotBlank(message = "La descripción del problema es obligatoria") // Valida que no sea nulo ni vacío
     @Size(min = 10, max = 500, message = "La descripción debe tener entre 10 y 500 caracteres") // Restringe el largo
     @Column(nullable = false, length = 500) // Configura la columna en la base de datos
