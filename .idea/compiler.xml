@@ -11,7 +11,7 @@
         <module name="ms-registry" />
         <module name="ms-gateway" />
       </profile>
-      <profile name="Annotation profile for ms-tecnico" enabled="true">
+      <profile name="Annotation profile for ms-notificaciones" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -35,6 +35,7 @@
       <module name="ms-diagnostico" options="-parameters" />
       <module name="ms-equipos" options="-parameters" />
       <module name="ms-gateway" options="-parameters" />
+      <module name="ms-notificaciones" options="-parameters" />
       <module name="ms-pagos" options="-parameters" />
       <module name="ms-persona" options="-parameters" />
       <module name="ms-registry" options="-parameters" />
