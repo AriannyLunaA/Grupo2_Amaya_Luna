@@ -1,4 +1,4 @@
-/package com.servicio.tecnico.mscliente.service;
+package com.servicio.tecnico.mscliente.service;
 
 import com.servicio.tecnico.mscliente.model.Cliente;
 import com.servicio.tecnico.mscliente.repository.ClienteRepository;

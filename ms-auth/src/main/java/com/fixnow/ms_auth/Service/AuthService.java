@@ -1,13 +1,14 @@
 package com.fixnow.ms_auth.Service;
 
+import com.fixnow.ms_auth.Client.PersonaClient;
 import com.fixnow.ms_auth.DTO.AuthRequestDTO;
 import com.fixnow.ms_auth.DTO.AuthResponseDTO;
+import com.fixnow.ms_auth.DTO.PersonaDTO;
 import com.fixnow.ms_auth.Model.UsuarioCredencial;
 import com.fixnow.ms_auth.Repository.UsuarioCredencialRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,9 @@ public class AuthService {
     @Autowired
     private UsuarioCredencialRepository repository;
 
+    @Autowired
+    private PersonaClient personaClient; // <-- NUEVO: Inyectamos el cliente Feign
+
     public AuthResponseDTO loginManual(AuthRequestDTO request) {
         log.info("buscando credenciales para el usuario: {}", request.getUsername());
         Optional<UsuarioCredencial> usuarioOpt = repository.findByUsername(request.getUsername());
@@ -27,27 +31,42 @@ public class AuthService {
 
             if (usuario.getPassword().equals(request.getPassword())) {
                 log.info("login exitoso para el usuario: {}", request.getUsername());
-                return new AuthResponseDTO(
-                        usuario.getId(),
-                        usuario.getUsername(),
-                        usuario.getRol(),
-                        usuario.getPerfilId(),
-                        "Login Exitoso"
-                );
+
+                AuthResponseDTO response = new AuthResponseDTO();
+                response.setId(usuario.getId());
+                response.setUsername(usuario.getUsername());
+                response.setRol(usuario.getRol());
+                response.setPerfilId(usuario.getPerfilId());
+                response.setMensaje("Login Exitoso");
+
+
+                try {
+                    log.info("consultando a ms-persona para el PerfilId: {}", usuario.getPerfilId());
+                    PersonaDTO persona = personaClient.buscarPorId(usuario.getPerfilId());
+
+                    if (persona != null) {
+                        response.setRut(persona.getRut());
+                        response.setNombres(persona.getNombres());
+                        response.setApellidos(persona.getApellidos());
+                        response.setCorreo(persona.getCorreo());
+                        log.info("datos de persona agregados al response exitosamente");
+                    }
+                } catch (Exception e) {
+                    log.error("error al comunicarse con ms-persona {}", e.getMessage());
+                    response.setMensaje("login exitoso: sin datos del perfil por problemas en la conexion");
+                }
+                return response;
             } else {
                 log.warn("contraseña incorrecta para el usuario: {}", request.getUsername());
             }
         } else {
-            log.warn("usuario no encontrado: {}", request.getUsername());
+            log.warn("usuario no encontrado {}", request.getUsername());
         }
-
-
         return null;
     }
 
-
     public List<UsuarioCredencial> listarTodos() {
-        log.info("obteniendo todos los usuarios registrados en la base de datos");
+        log.info("obteniendo todos los usuarios registrados en la bdd");
         return repository.findAll();
     }
 }

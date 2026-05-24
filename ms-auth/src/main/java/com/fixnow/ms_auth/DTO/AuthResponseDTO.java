@@ -13,4 +13,9 @@ public class AuthResponseDTO {
     private String rol;
     private Long perfilId;
     private String mensaje;
+
+    private String rut;
+    private String nombres;
+    private String apellidos;
+    private String correo;
 }
