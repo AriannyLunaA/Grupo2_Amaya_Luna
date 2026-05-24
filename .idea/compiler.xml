@@ -22,15 +22,15 @@
         <module name="ms-tecnico" />
         <module name="ms-cliente" />
         <module name="ms-diagnostico" />
-        <module name="ms-equipos" />
       </profile>
-      <profile name="Annotation profile for ms-auth" enabled="true">
+      <profile name="Annotation profile for ms-equipos" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="ms-equipos" />
         <module name="ms-persona" />
         <module name="ms-auth" />
       </profile>

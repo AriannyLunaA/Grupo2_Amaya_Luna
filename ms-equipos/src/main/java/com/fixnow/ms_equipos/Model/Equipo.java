@@ -1,49 +1,63 @@
 package com.fixnow.ms_equipos.Model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "equipo")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "equipos")
 public class Equipo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "id_equipo")
+    private Long idEquipo;
 
-    @NotBlank(message = "El nombre del equipo es obligatorio")
-    @Size(max = 100, message = "El nombre no puede superar los 100 caracteres")
-    @Column(name = "nombre", nullable = false, length = 100)
-    private String nombre;
+    @NotNull(message = "El ID de la persona es obligatorio")
+    @Column(name = "id_persona")
+    private Long idPersona;
 
-    @NotBlank(message = "La marca es obligatoria")
-    @Size(max = 50, message = "La marca no puede superar los 50 caracteres")
-    @Column(name = "marca", nullable = false, length = 50)
+    @NotNull(message = "El tipo de equipo es obligatorio")
+    @Size(max = 50)
+    private String tipo;
+
+    @NotNull(message = "La marca es obligatoria")
+    @Size(max = 50)
     private String marca;
 
-    @NotBlank(message = "El modelo es obligatorio")
-    @Size(max = 50, message = "El modelo no puede superar los 50 caracteres")
-    @Column(name = "modelo", nullable = false, length = 50)
+    @NotNull(message = "El modelo es obligatorio")
+    @Size(max = 100)
     private String modelo;
 
-    @NotBlank(message = "El número de serie es obligatorio")
-    @Size(max = 100, message = "El número de serie no puede superar los 100 caracteres")
-    @Column(name = "numero_serie", nullable = false, unique = true, length = 100)
+    @NotNull(message = "El procesador es obligatorio")
+    @Size(max = 100)
+    private String procesador;
+
+    @NotNull(message = "La memoria RAM es obligatoria")
+    @Column(name = "memoria_ram")
+    @Size(max = 50)
+    private String memoriaRam;
+
+    @NotNull(message = "El almacenamiento es obligatorio")
+    @Size(max = 100)
+    private String almacenamiento;
+
+    @NotNull(message = "La tarjeta gráfica es obligatoria")
+    @Column(name = "tarjeta_grafica")
+    @Size(max = 100)
+    private String tarjetaGrafica;
+
+    @Column(name = "numero_serie")
+    @Size(max = 100)
     private String numeroSerie;
 
-    @NotBlank(message = "El estado es obligatorio")
-    @Size(max = 30, message = "El estado no puede superar los 30 caracteres")
-    @Column(name = "estado", nullable = false, length = 30)
-    private String estado;
-
-    @Column(name = "fecha_ingreso", insertable = false, updatable = false)
-    private LocalDateTime fechaIngreso;
+    @Column(name = "observaciones_fisicas")
+    @Size(max = 255)
+    private String observacionesFisicas;
 }

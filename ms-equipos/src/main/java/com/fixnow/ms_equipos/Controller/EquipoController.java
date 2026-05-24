@@ -1,8 +1,8 @@
 package com.fixnow.ms_equipos.Controller;
 
-import jakarta.validation.Valid;
-import com.fixnow.ms_equipos.Model.Equipo;
+import com.fixnow.ms_equipos.DTO.EquipoDTO;
 import com.fixnow.ms_equipos.Service.EquipoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,97 +11,38 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/equipos")
+@RequestMapping("/api/v1/equipo")
 public class EquipoController {
 
     @Autowired
-    private EquipoService equipoService;
+    private EquipoService service;
 
-
-    @GetMapping("")
-    public ResponseEntity<List<Equipo>> getAllEquipos() {
-        List<Equipo> listado = equipoService.listarEquipos();
-        if (listado.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(listado, HttpStatus.OK);
-        }
+    @GetMapping
+    public ResponseEntity<List<EquipoDTO>> listar() {
+        return ResponseEntity.ok(service.listarTodos());
     }
 
-    /
     @GetMapping("/{id}")
-    public ResponseEntity<Equipo> getEquipoById(@PathVariable Long id) {
-        Equipo buscado = equipoService.buscarPorId(id);
-        if (buscado != null) {
-            return new ResponseEntity<>(buscado, HttpStatus.OK);
+    public ResponseEntity<EquipoDTO> obtenerPorId(@PathVariable Long id) {
+        EquipoDTO dto = service.buscarPorId(id);
+        if (dto != null) {
+            return ResponseEntity.ok(dto);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.notFound().build();
         }
     }
 
-
-    @GetMapping("/serie/{numeroSerie}")
-    public ResponseEntity<Equipo> getEquipoByNumeroSerie(@PathVariable String numeroSerie) {
-        Equipo buscado = equipoService.buscarPorNumeroSerie(numeroSerie);
-        if (buscado != null) {
-            return new ResponseEntity<>(buscado, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    @GetMapping("/persona/{idPersona}")
+    public ResponseEntity<List<EquipoDTO>> listarPorPersona(@PathVariable Long idPersona) {
+        return ResponseEntity.ok(service.listarPorPersona(idPersona));
     }
 
-
-    @GetMapping("/marca/{marca}")
-    public ResponseEntity<List<Equipo>> getEquiposByMarca(@PathVariable String marca) {
-        List<Equipo> filtrados = equipoService.buscarPorMarca(marca);
-        if (filtrados.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(filtrados, HttpStatus.OK);
+    @PostMapping
+    public ResponseEntity<EquipoDTO> crear(@Valid @RequestBody EquipoDTO dto) {
+        EquipoDTO equipoGuardado = service.guardar(dto);
+        if (equipoGuardado == null) {
+            return ResponseEntity.badRequest().build();
         }
-    }
-
-
-    @GetMapping("/estado/{estado}")
-    public ResponseEntity<List<Equipo>> getEquiposByEstado(@PathVariable String estado) {
-        List<Equipo> filtrados = equipoService.buscarPorEstado(estado);
-        if (filtrados.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(filtrados, HttpStatus.OK);
-        }
-    }
-
-
-    @PostMapping("/")
-    public ResponseEntity<Equipo> createEquipo(@RequestBody @Valid Equipo equipo) {
-        Equipo nuevo = equipoService.agregarEquipo(equipo);
-        if (nuevo != null) {
-            return new ResponseEntity<>(nuevo, HttpStatus.CREATED);
-        } else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-    }
-
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteEquipo(@PathVariable Long id) {
-        boolean res = equipoService.borrarEquipo(id);
-        if (res) {
-            return new ResponseEntity<>(HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-    }
-
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Equipo> updateEquipo(@PathVariable Long id, @RequestBody @Valid Equipo nuevo) {
-        Equipo actualizado = equipoService.actualizarEquipo(id, nuevo);
-        if (actualizado != null) {
-            return new ResponseEntity<>(actualizado, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
+        return ResponseEntity.status(HttpStatus.CREATED).body(equipoGuardado);
     }
 }
