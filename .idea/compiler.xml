@@ -11,28 +11,20 @@
         <module name="ms-registry" />
         <module name="ms-gateway" />
       </profile>
-      <profile name="Annotation profile for ms-diagnostico" enabled="true">
+      <profile name="Annotation profile for ms-tecnico" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="ms-tecnico" />
         <module name="ms-cliente" />
-        <module name="ms-diagnostico" />
-      </profile>
-      <profile name="Annotation profile for ms-equipos" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="ms-equipos" />
         <module name="ms-persona" />
+        <module name="ms-diagnostico" />
         <module name="ms-auth" />
+        <module name="ms-tecnico" />
+        <module name="ms-pagos" />
+        <module name="ms-equipos" />
       </profile>
     </annotationProcessing>
   </component>
@@ -43,6 +35,7 @@
       <module name="ms-diagnostico" options="-parameters" />
       <module name="ms-equipos" options="-parameters" />
       <module name="ms-gateway" options="-parameters" />
+      <module name="ms-pagos" options="-parameters" />
       <module name="ms-persona" options="-parameters" />
       <module name="ms-registry" options="-parameters" />
       <module name="ms-tecnico" options="-parameters" />
