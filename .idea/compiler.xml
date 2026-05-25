@@ -18,8 +18,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="ms-tecnico" />
-        <module name="ms-diagnostico" />
+        <module name="ms-auth" />
       </profile>
       <profile name="Annotation profile for ms-ticket" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -29,13 +28,14 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="ms-ticket" />
+        <module name="ms-tecnico" />
         <module name="ms-persona" />
-        <module name="ms-auth" />
         <module name="ms-equipos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ms-cliente" target="21" />
+      <module name="ms-diagnostico" target="21" />
       <module name="ms-tickets" target="21" />
     </bytecodeTargetLevel>
   </component>
