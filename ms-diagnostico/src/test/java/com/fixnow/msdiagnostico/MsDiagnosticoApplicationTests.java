@@ -1,10 +1,10 @@
-package com.servicio.tecnico.mstecnico;
+package com.fixnow.msdiagnostico;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsTecnicoApplicationTests {
+class MsDiagnosticoApplicationTests {
 
     @Test
     void contextLoads() {

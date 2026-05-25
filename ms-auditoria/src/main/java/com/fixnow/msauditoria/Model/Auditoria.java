@@ -26,23 +26,23 @@ public class Auditoria {
     private Integer idAuditoria;
 
     @Column(name = "id_ticket")
-    private Integer idTicket;
+    private long idTicket;
 
     @Column(name = "id_pago")
     private Integer idPago;
 
     @Column(name = "id_persona")
-    private Integer idPersona;
+    private long idPersona;
 
-    @NotBlank(message = "La acción realizada es obligatoria")
+    @NotBlank(message = "la acción realizada es obligatoria")
     @Column(name = "accion", nullable = false, length = 100)
     private String accion;
 
-    @NotBlank(message = "Los detalles son obligatorios")
+    @NotBlank(message = "los detalles son obligatorios")
     @Column(name = "detalles", nullable = false, length = 255)
     private String detalles;
 
-    @NotNull(message = "La fecha es obligatoria")
+    @NotNull(message = "la fecha es obligatoria")
     @Column(name = "fecha", nullable = false)
     private LocalDateTime fecha;
 }

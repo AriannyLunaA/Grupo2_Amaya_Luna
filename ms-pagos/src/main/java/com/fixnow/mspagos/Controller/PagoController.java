@@ -11,11 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Controlador REST para el recurso de Pagos.
- * Delega toda la lógica de negocio al Service, cumpliendo con el principio
- * de Responsabilidad Única (SRP). Solo gestiona mapeos y códigos HTTP.
- */
+
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/pagos")
@@ -47,7 +43,7 @@ public class PagoController {
     }
 
     @GetMapping("/ticket/{idTicket}")
-    public ResponseEntity<List<Pago>> buscarPagosPorTicket(@PathVariable Integer idTicket) {
+    public ResponseEntity<List<Pago>> buscarPagosPorTicket(@PathVariable Long idTicket) {
         log.info("GET solicitado en /api/v1/pagos/ticket/{}", idTicket);
         List<Pago> listadoPorTicket = pagoService.buscarPagosPorTicket(idTicket);
         if (listadoPorTicket.isEmpty()) {
@@ -56,6 +52,7 @@ public class PagoController {
             return new ResponseEntity<>(listadoPorTicket, HttpStatus.OK);
         }
     }
+
 
     @PostMapping("/")
     public ResponseEntity<String> registrarPago(@RequestBody @Valid Pago pago) {

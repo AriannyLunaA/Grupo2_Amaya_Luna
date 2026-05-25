@@ -8,11 +8,11 @@
         <version>4.0.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.servicio.tecnico</groupId>
-    <artifactId>ms-tecnico</artifactId>
+    <groupId>com.fixnow</groupId>
+    <artifactId>ms-diagnostico</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ms-tecnico</name>
-    <description>ms-tecnico</description>
+    <name>ms-diagnostico</name>
+    <description>ms-diagnostico</description>
     <url/>
     <licenses>
         <license/>
@@ -45,6 +45,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
@@ -73,6 +77,18 @@
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-flyway</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+        </dependency>
+
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

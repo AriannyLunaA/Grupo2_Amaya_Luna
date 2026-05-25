@@ -1,6 +1,6 @@
 CREATE TABLE pagos (
                        id_pago INT AUTO_INCREMENT PRIMARY KEY,
-                       id_ticket INT NOT NULL,
+                       id_ticket BIGINT NOT NULL,
                        monto_total DOUBLE NOT NULL,
                        metodo_pago VARCHAR(50) NOT NULL,
                        estado VARCHAR(50) NOT NULL,

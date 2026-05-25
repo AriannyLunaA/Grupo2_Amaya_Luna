@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Endpoint para la gestión y consulta del historial de notificaciones.
- */
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/notificaciones")
@@ -45,7 +42,7 @@ public class NotificacionController {
     }
 
     @GetMapping("/ticket/{idTicket}")
-    public ResponseEntity<List<Notificacion>> buscarPorTicket(@PathVariable Integer idTicket) {
+    public ResponseEntity<List<Notificacion>> buscarPorTicket(@PathVariable Long idTicket) {
         log.info("GET solicitado en /api/v1/notificaciones/ticket/{}", idTicket);
         List<Notificacion> lista = notificacionService.buscarPorTicket(idTicket);
         if (lista.isEmpty()) {
@@ -55,7 +52,7 @@ public class NotificacionController {
         }
     }
 
-    // Aquí usamos el retorno de String que sugeriste
+
     @PostMapping("/")
     public ResponseEntity<String> enviar(@RequestBody @Valid Notificacion notificacion) {
         log.info("POST solicitado en /api/v1/notificaciones/");

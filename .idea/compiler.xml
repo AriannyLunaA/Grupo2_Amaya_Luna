@@ -11,24 +11,30 @@
         <module name="ms-registry" />
         <module name="ms-gateway" />
       </profile>
-      <profile name="Annotation profile for ms-pagos" enabled="true">
+      <profile name="Annotation profile for ms-notificaciones" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="ms-cliente" />
-        <module name="ms-diagnostico" />
         <module name="ms-persona" />
+        <module name="ms-diagnostico" />
         <module name="ms-auth" />
         <module name="ms-notificaciones" />
-        <module name="ms-tecnico" />
+        <module name="ms-ticket" />
         <module name="ms-pagos" />
         <module name="ms-auditoria" />
         <module name="ms-equipos" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ms-cliente" target="21" />
+      <module name="ms-tecnico" target="21" />
+      <module name="ms-tickets" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -43,6 +49,7 @@
       <module name="ms-persona" options="-parameters" />
       <module name="ms-registry" options="-parameters" />
       <module name="ms-tecnico" options="-parameters" />
+      <module name="ms-ticket" options="-parameters" />
       <module name="ms-tickets" options="-parameters" />
     </option>
   </component>

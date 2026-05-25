@@ -9,6 +9,5 @@ import java.util.List;
 @Repository
 public interface PagoRepository extends JpaRepository<Pago, Integer> {
 
-    // Método personalizado para obtener el historial de transacciones de un ticket
-    List<Pago> findByIdTicket(Integer idTicket);
+    List<Pago> findByIdTicket(Long idTicket);
 }

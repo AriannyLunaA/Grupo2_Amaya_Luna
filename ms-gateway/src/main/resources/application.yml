@@ -31,6 +31,18 @@ spring:
               uri: lb://ms-ticket
               predicates:
                 - Path=/api/v1/ticket/**
+            - id: ms-diagnostico
+              uri: lb://ms-diagnostico
+              predicates:
+                - Path=/api/v1/diagnostico/**
+            - id: ms-pagos
+              uri: lb://ms-pagos
+              predicates:
+                - Path=/api/v1/pagos/**
+            - id: ms-notificaciones
+              uri: lb://ms-notificaciones
+              predicates:
+                - Path=/api/v1/notificaciones/**
 
 eureka:
   client:

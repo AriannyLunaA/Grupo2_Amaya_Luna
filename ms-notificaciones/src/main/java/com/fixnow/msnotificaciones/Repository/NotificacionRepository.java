@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface NotificacionRepository extends JpaRepository<Notificacion, Integer> {
 
-    // Recupera la trazabilidad de los avisos enviados en el contexto de un ticket
-    List<Notificacion> findByIdTicket(Integer idTicket);
+
+    List<Notificacion> findByIdTicket(long idTicket);
 }
