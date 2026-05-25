@@ -5,10 +5,16 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ms-tickets/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-cliente/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-equipos/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-tecnico/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" default="true" project-jdk-name="24" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="ms-21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

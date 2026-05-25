@@ -8,15 +8,40 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ms-tickets" />
+        <module name="ms-registry" />
+        <module name="ms-gateway" />
+      </profile>
+      <profile name="Annotation profile for ms-equipos" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="ms-cliente" />
+        <module name="ms-auth" />
+        <module name="ms-equipos" />
+      </profile>
+      <profile name="Annotation profile for ms-tecnico" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="ms-tecnico" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="eureraServer" target="21" />
-      <module name="ms-cliente" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ms-auth" options="-parameters" />
+      <module name="ms-cliente" options="-parameters" />
+      <module name="ms-equipos" options="-parameters" />
+      <module name="ms-gateway" options="-parameters" />
+      <module name="ms-registry" options="-parameters" />
+      <module name="ms-tecnico" options="-parameters" />
       <module name="ms-tickets" options="-parameters" />
     </option>
   </component>
