@@ -3,6 +3,7 @@ package com.fixnow.mspagos.Controller;
 import com.fixnow.mspagos.Model.Pago;
 import com.fixnow.mspagos.Service.PagoService;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.List;
  * Delega toda la lógica de negocio al Service, cumpliendo con el principio
  * de Responsabilidad Única (SRP). Solo gestiona mapeos y códigos HTTP.
  */
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/pagos")
 public class PagoController {
@@ -24,6 +26,7 @@ public class PagoController {
 
     @GetMapping("")
     public ResponseEntity<List<Pago>> listarPagos() {
+        log.info("GET solicitado en /api/v1/pagos");
         List<Pago> listadoPagos = pagoService.listarPagos();
         if (listadoPagos.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -34,6 +37,7 @@ public class PagoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Pago> buscarPagoPorId(@PathVariable Integer id) {
+        log.info("GET solicitado en /api/v1/pagos/{}", id);
         Pago pagoBuscado = pagoService.buscarPagoPorId(id);
         if (pagoBuscado != null) {
             return new ResponseEntity<>(pagoBuscado, HttpStatus.OK);
@@ -44,6 +48,7 @@ public class PagoController {
 
     @GetMapping("/ticket/{idTicket}")
     public ResponseEntity<List<Pago>> buscarPagosPorTicket(@PathVariable Integer idTicket) {
+        log.info("GET solicitado en /api/v1/pagos/ticket/{}", idTicket);
         List<Pago> listadoPorTicket = pagoService.buscarPagosPorTicket(idTicket);
         if (listadoPorTicket.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -53,12 +58,13 @@ public class PagoController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<Pago> registrarPago(@RequestBody @Valid Pago pago) {
-        boolean registroExitoso = pagoService.registrarPago(pago);
-        if (registroExitoso) {
-            return new ResponseEntity<>(pago, HttpStatus.CREATED);
+    public ResponseEntity<String> registrarPago(@RequestBody @Valid Pago pago) {
+        log.info("POST solicitado en /api/v1/pagos/");
+
+        if (pagoService.registrarPago(pago)) {
+            return new ResponseEntity<>("Transacción de pago registrada con éxito.", HttpStatus.CREATED);
         } else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Error: No se pudo procesar el pago. Verifique el monto y la existencia del Ticket.", HttpStatus.BAD_REQUEST);
         }
     }
 }
