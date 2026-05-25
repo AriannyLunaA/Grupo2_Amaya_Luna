@@ -8,10 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ms-tickets" />
-        <module name="ms-registry" />
-        <module name="ms-gateway" />
+        <module name="ms-tecnico" />
       </profile>
-      <profile name="Annotation profile for ms-equipos" enabled="true">
+      <profile name="Annotation profile for ms-inventario" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -19,18 +18,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
         <module name="ms-cliente" />
-        <module name="ms-auth" />
-        <module name="ms-equipos" />
-      </profile>
-      <profile name="Annotation profile for ms-tecnico" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="ms-tecnico" />
+        <module name="ms-inventario" />
       </profile>
     </annotationProcessing>
   </component>
@@ -40,9 +28,10 @@
       <module name="ms-cliente" options="-parameters" />
       <module name="ms-equipos" options="-parameters" />
       <module name="ms-gateway" options="-parameters" />
+      <module name="ms-inventario" options="-parameters" />
       <module name="ms-registry" options="-parameters" />
-      <module name="ms-tecnico" options="-parameters" />
-      <module name="ms-tickets" options="-parameters" />
+      <module name="ms-tecnico" options="" />
+      <module name="ms-tickets" options="" />
     </option>
   </component>
 </project>

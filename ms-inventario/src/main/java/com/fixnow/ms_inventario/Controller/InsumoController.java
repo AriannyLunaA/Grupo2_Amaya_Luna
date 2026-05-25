@@ -43,19 +43,19 @@ public class InsumoController {
     public ResponseEntity<Insumo> actualizar(@PathVariable Long id, @RequestBody Insumo insumo) {
         return new ResponseEntity<>(insumoService.actualizarInsumo(id, insumo), HttpStatus.OK);
     }
-//Eliminar
+//5.Eliminar
 @DeleteMapping("/{id}")
 public ResponseEntity<Map<String, String>> eliminar(@PathVariable Long id) {
     // 1. Ejecutamos la lógica
     insumoService.eliminarInsumo(id);
 
     // 2. Registramos el evento en los logs (Esto es vital para auditoría)
-    // Usamos {} como placeholder para inyectar el ID de forma limpia
+
     log.info("Insumo con ID {} eliminado exitosamente por el usuario", id);
 
     // 3. Devolvemos la respuesta amigable al Frontend
     Map<String, String> respuesta = new HashMap<>();
-    respuesta.put("mensaje", "Insumo borrado con éxito");
+    respuesta.put("Respuesta:", "Insumo borrado con éxito");
 
     return new ResponseEntity<>(respuesta, HttpStatus.OK);
 }
