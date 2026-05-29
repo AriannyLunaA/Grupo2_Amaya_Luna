@@ -38,7 +38,7 @@ public class Persona {
     @Size(max = 100)
     private String correo;
 
-    @NotNull(message = "la fecha de nacimiento es obligatoria")
+    @NotNull(message = "la fecha de nacimiento es obligatoria. Formato: YYYY-MM-DD ")
     @Column(name = "fecha_nacimiento")
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;

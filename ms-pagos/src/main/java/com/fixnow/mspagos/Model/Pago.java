@@ -32,7 +32,7 @@ public class Pago {
     @Column(name = "monto_total", nullable = false)
     private Double montoTotal;
 
-    @NotBlank(message = "el método de pago es obligatorio")
+    @NotBlank(message = "el método de pago es obligatorio. Ejemplo: TRANSFERENCIA, EFECTIVO")
     @Column(name = "metodo_pago", nullable = false, length = 50)
     private String metodoPago;
 

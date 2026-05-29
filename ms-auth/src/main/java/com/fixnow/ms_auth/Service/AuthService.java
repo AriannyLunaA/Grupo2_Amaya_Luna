@@ -70,8 +70,11 @@ public class AuthService {
         return repository.findAll();
     }
 
+    /*ignore esto profesor, es lo que hicimos en la prueba el lunes
     public List<UsuarioCredencial> findByRol(String rol) {
         log.info("obteniendo los usuarios por rol registrados en la bdd");
         return repository.findByRol(rol);
     }
+    */
+
 }

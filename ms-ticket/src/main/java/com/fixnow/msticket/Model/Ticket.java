@@ -34,7 +34,7 @@ public class Ticket {
     @Column(name = "fecha_ingreso")
     private Date fechaIngreso;
 
-    @NotNull(message = "el estado es obligatorio")
+    @NotNull(message = "el estado es obligatorio. Ejemplo: INGRESADO, EN_REVISION, EN_REPARACION, FINALIZADO")
     @Size(max = 50)
     private String estado;
 

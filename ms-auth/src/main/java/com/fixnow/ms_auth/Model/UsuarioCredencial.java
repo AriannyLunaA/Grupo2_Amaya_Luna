@@ -28,7 +28,7 @@ public class UsuarioCredencial {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @NotNull(message = "el rol es obligatorio")
+    @NotNull(message = "el rol es obligatorio. Ejemplo: Tecnico, Admin, Persona")
     @Size(max = 50)
     @Column(name = "rol", nullable = false, length = 50)
     private String rol;

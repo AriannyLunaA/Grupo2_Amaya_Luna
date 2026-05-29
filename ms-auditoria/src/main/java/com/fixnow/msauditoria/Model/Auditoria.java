@@ -31,7 +31,7 @@ public class Auditoria {
     @Column(name = "id_persona")
     private Long idPersona;
 
-    @NotBlank(message = "la acción realizada es obligatoria")
+    @NotBlank(message = "la acción realizada es obligatoria. Ejemplo: TICKET_CREADO, PAGO_PROCESADO,DIAGNOSTICO_FINALIZADO,NOTIFICACION ENVIADA")
     @Column(name = "accion", nullable = false, length = 100)
     private String accion;
 

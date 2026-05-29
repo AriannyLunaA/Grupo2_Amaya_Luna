@@ -37,7 +37,7 @@ public class Notificacion {
     @Column(name = "mensaje", nullable = false, length = 255)
     private String mensaje;
 
-    @NotBlank(message = "el tipo de notificación es obligatorio")
+    @NotBlank(message = "el tipo de notificación es obligatorio. Ejemplo: INGRESO, EN_PROCESO, DIAGNOSTICO_FINALIZADO")
     @Column(name = "tipo_notificacion", nullable = false, length = 50)
     private String tipoNotificacion;
 
