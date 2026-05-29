@@ -47,7 +47,7 @@ spring:
               uri: lb://ms-auditoria
               predicates:
                 - Path=/api/v1/auditoria/**
-            - id: ms-auditoria
+            - id: ms-inventario
               uri: lb://ms-inventario
               predicates:
                 - Path=/api/v1/inventario/**
