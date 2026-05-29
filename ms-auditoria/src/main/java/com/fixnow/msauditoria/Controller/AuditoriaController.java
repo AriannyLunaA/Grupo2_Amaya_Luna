@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Endpoint para la gestión y consulta del historial de auditoría.
- */
+
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/auditoria")

@@ -9,10 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-/**
- * Entidad que representa el registro histórico de las auditorías del sistema.
- * Se mapea directamente con la estructura de Flyway (V1__crear_tabla_auditoria.sql).
- */
+
 @Entity
 @Table(name = "auditoria")
 @Data
@@ -26,13 +23,13 @@ public class Auditoria {
     private Integer idAuditoria;
 
     @Column(name = "id_ticket")
-    private long idTicket;
+    private Long idTicket;
 
     @Column(name = "id_pago")
     private Integer idPago;
 
     @Column(name = "id_persona")
-    private long idPersona;
+    private Long idPersona;
 
     @NotBlank(message = "la acción realizada es obligatoria")
     @Column(name = "accion", nullable = false, length = 100)
@@ -42,7 +39,6 @@ public class Auditoria {
     @Column(name = "detalles", nullable = false, length = 255)
     private String detalles;
 
-    @NotNull(message = "la fecha es obligatoria")
     @Column(name = "fecha", nullable = false)
     private LocalDateTime fecha;
 }

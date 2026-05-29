@@ -8,7 +8,7 @@ CREATE TABLE auditoria (
                            fecha DATETIME NOT NULL
 );
 
--- Insertamos datos de prueba
+
 INSERT INTO auditoria (id_ticket, id_persona, accion, detalles, fecha)
 VALUES (1, 1, 'TICKET_CREADO', 'Se registró un nuevo ticket en el sistema para diagnóstico.', NOW());
 

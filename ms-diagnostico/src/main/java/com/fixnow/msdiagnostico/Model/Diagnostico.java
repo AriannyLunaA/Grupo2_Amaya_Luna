@@ -39,4 +39,10 @@ public class Diagnostico {
     @NotNull
     @Column(name = "tiempo_estimado_dias")
     private Integer tiempoEstimadoDias;
+
+    @Column(name = "id_repuesto")
+    private Integer idRepuesto;
+
+    @Column(name = "cantidad_repuesto")
+    private Integer cantidadRepuesto;
 }

@@ -18,6 +18,11 @@
         <option value="$PROJECT_DIR$/ms-notificaciones/pom.xml" />
         <option value="$PROJECT_DIR$/ms-auditoria/pom.xml" />
         <option value="$PROJECT_DIR$/ms-ticket/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-acceso/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-equipo/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-notificacion/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-pago/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-inventario/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

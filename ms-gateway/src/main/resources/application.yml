@@ -43,6 +43,14 @@ spring:
               uri: lb://ms-notificaciones
               predicates:
                 - Path=/api/v1/notificaciones/**
+            - id: ms-auditoria
+              uri: lb://ms-auditoria
+              predicates:
+                - Path=/api/v1/auditoria/**
+            - id: ms-auditoria
+              uri: lb://ms-inventario
+              predicates:
+                - Path=/api/v1/inventario/**
 
 eureka:
   client:

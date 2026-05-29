@@ -20,7 +20,7 @@ public class AuthService {
     private UsuarioCredencialRepository repository;
 
     @Autowired
-    private PersonaClient personaClient; // <-- NUEVO: Inyectamos el cliente Feign
+    private PersonaClient personaClient;
 
     public AuthResponseDTO loginManual(AuthRequestDTO request) {
         log.info("buscando credenciales para el usuario: {}", request.getUsername());
@@ -68,5 +68,10 @@ public class AuthService {
     public List<UsuarioCredencial> listarTodos() {
         log.info("obteniendo todos los usuarios registrados en la bdd");
         return repository.findAll();
+    }
+
+    public List<UsuarioCredencial> findByRol(String rol) {
+        log.info("obteniendo los usuarios por rol registrados en la bdd");
+        return repository.findByRol(rol);
     }
 }

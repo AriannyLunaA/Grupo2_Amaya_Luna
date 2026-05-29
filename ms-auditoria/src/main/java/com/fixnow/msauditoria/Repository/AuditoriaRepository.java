@@ -9,9 +9,9 @@ import java.util.List;
 @Repository
 public interface AuditoriaRepository extends JpaRepository<Auditoria, Integer> {
 
-    List<Auditoria> findByIdTicket(long idTicket);
+    List<Auditoria> findByIdTicket(Long idTicket);
 
     List<Auditoria> findByIdPago(Integer idPago);
 
-    List<Auditoria> findByIdPersona(long idPersona);
+    List<Auditoria> findByIdPersona(Long idPersona);
 }

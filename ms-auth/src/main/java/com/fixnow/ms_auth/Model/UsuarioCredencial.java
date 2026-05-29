@@ -24,7 +24,7 @@ public class UsuarioCredencial {
     private String username;
 
     @NotNull(message = "la contraseña es obligatoria")
-    @Size(max = 255)
+    @Size(max = 50, min = 25)
     @Column(name = "password", nullable = false)
     private String password;
 

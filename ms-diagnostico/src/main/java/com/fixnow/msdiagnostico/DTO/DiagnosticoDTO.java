@@ -10,4 +10,6 @@ public class DiagnosticoDTO {
     private Boolean necesitaRepuesto;
     private Integer costoEstimado;
     private Integer tiempoEstimadoDias;
+    private Integer idRepuesto;
+    private Integer cantidadRepuesto;
 }

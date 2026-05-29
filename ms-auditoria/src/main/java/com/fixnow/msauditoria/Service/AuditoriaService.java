@@ -32,7 +32,7 @@ public class AuditoriaService {
         try {
             log.info("iniciando persistencia de log de auditoría para la acción: {}", auditoria.getAccion());
 
-            // Asignamos la fecha exacta del servidor en el momento de guardar
+
             auditoria.setFecha(LocalDateTime.now());
 
             auditoriaRepository.save(auditoria);
