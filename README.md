@@ -56,3 +56,16 @@ El microservicio de **Inventario** cuenta con documentación interactiva mediant
 * `GET /api/v1/inventario/{id}` - Buscar un repuesto específico por su ID único.
 * `POST /api/v1/inventario/` - Registrar un nuevo repuesto en el sistema.
 * `PUT /api/v1/inventario/{id}/descontar` - Disminuir el stock disponible de un artículo.
+--------------------------------------
+
+---*Documentación de la API de Tickets con Swagger*---
+
+El microservicio de **Tickets** tiene su propia documentación interactiva para pruebas de endpoints.
+
+* **URL de acceso local:** [http://localhost:8085/swagger-ui/index.html](http://localhost:8085/swagger-ui/index.html)
+* **Puerto del servicio:** `8085`
+
+### Endpoints Disponibles:
+* `GET /api/v1/ticket` - Obtener la lista completa de tickets registrados.
+* `GET /api/v1/ticket/{id}` - Buscar un ticket específico por su ID único (`Long`).
+* `POST /api/v1/ticket` - Crear y registrar un nuevo ticket de soporte en el sistema.
