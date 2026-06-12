@@ -67,5 +67,19 @@ El microservicio de **Tickets** tiene su propia documentación interactiva para 
 
 ### Endpoints Disponibles:
 * `GET /api/v1/ticket` - Obtener la lista completa de tickets registrados.
-* `GET /api/v1/ticket/{id}` - Buscar un ticket específico por su ID único (`Long`).
+* `GET /api/v1/ticket/{id}` - Buscar un ticket específico por su ID único .
 * `POST /api/v1/ticket` - Crear y registrar un nuevo ticket de soporte en el sistema.
+
+--------------------------------------------------------
+
+---*Documentación de la API de Diagnósticos con Swagger*---
+
+El microservicio de **Diagnósticos** cuenta con una interfaz interactiva de Swagger para la validación de sus operaciones.
+
+* **URL de acceso local:** [http://localhost:8086/swagger-ui/index.html](http://localhost:8086/swagger-ui/index.html)
+* **Puerto del servicio:** `8086`
+
+### Endpoints Disponibles:
+* `GET /api/v1/diagnostico` - Obtener la lista de diagnósticos técnicos emitidos.
+* `GET /api/v1/diagnostico/{id}` - Buscar un diagnóstico específico por su ID único.
+* `POST /api/v1/diagnostico` - Registrar un nuevo reporte de diagnóstico en el sistema.
