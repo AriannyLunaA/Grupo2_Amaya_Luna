@@ -43,4 +43,16 @@ Ejecutar la clase MsClienteApplication.java desde IntelliJ IDEA.  El servicio es
 
 
 
+----------------------------------
+--*Documentación de la API con Swagger*--
 
+El microservicio de **Inventario** cuenta con documentación interactiva mediante Swagger/OpenAPI UI.
+
+* **URL de acceso local:** [http://localhost:8084/swagger-ui/index.html](http://localhost:8084/swagger-ui/index.html)
+* **Puerto del servicio:** `8084`
+
+### Endpoints Disponibles:
+* `GET /api/v1/inventario` - Obtener la lista completa de repuestos en stock.
+* `GET /api/v1/inventario/{id}` - Buscar un repuesto específico por su ID único.
+* `POST /api/v1/inventario/` - Registrar un nuevo repuesto en el sistema.
+* `PUT /api/v1/inventario/{id}/descontar` - Disminuir el stock disponible de un artículo.

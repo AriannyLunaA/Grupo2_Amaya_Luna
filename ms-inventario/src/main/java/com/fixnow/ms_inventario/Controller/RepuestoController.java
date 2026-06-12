@@ -19,6 +19,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/inventario")
+//swagger
 @Tag(name = "API Inventario",description = "Api para la gestion del inventario")
 public class RepuestoController {
 
