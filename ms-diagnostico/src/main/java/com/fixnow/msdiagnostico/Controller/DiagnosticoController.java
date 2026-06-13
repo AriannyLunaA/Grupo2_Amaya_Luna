@@ -25,7 +25,7 @@ public class DiagnosticoController {
     private DiagnosticoService service;
 
     @GetMapping
-    @Operation(summary = "Obtener todos los diagnósticos", description = "Retorna la lista completa de diagnósticos emitidos en el sistema") // CAMBIO: Documentación de operación
+    @Operation(summary = "Obtener todos los diagnósticos", description = "Retorna la lista completa de diagnósticos emitidos en el sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Consulta exitosa se entrega la lista de diagnósticos")
     })
@@ -50,7 +50,8 @@ public class DiagnosticoController {
     @PostMapping
     @Operation(summary = "Crear un nuevo diagnóstico", description = "Registra un diagnóstico técnico en el sistema validando la integridad de los datos de entrada")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "201", description = "Diagnóstico creado correctamente en el sistema"),             @ApiResponse(responseCode = "400", description = "Error en la solicitud, datos inválidos o DTO mal estructurado"
+            @ApiResponse(responseCode = "201", description = "Diagnóstico creado correctamente en el sistema"),
+            @ApiResponse(responseCode = "400", description = "Error en la solicitud, datos inválidos o DTO mal estructurado"
     ) })
     public ResponseEntity<DiagnosticoDTO> crear(@Valid @RequestBody DiagnosticoDTO dto) {
         DiagnosticoDTO guardado = service.guardar(dto);

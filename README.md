@@ -76,8 +76,8 @@ El microservicio de **Tickets** tiene su propia documentación interactiva para 
 
 El microservicio de **Diagnósticos** cuenta con una interfaz interactiva de Swagger para la validación de sus operaciones.
 
-* **URL de acceso local:** [http://localhost:8086/swagger-ui/index.html](http://localhost:8086/swagger-ui/index.html)
-* **Puerto del servicio:** `8086`
+* **URL de acceso local:** [http://localhost:8088/swagger-ui/index.html](http://localhost:8088/swagger-ui/index.html)
+* **Puerto del servicio:** `8088`
 
 ### Endpoints Disponibles:
 * `GET /api/v1/diagnostico` - Obtener la lista de diagnósticos técnicos emitidos.
