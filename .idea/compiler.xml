@@ -10,16 +10,25 @@
         <module name="ms-registry" />
         <module name="ms-gateway" />
       </profile>
-      <profile name="Annotation profile for ms-ticket" enabled="true">
+      <profile name="Annotation profile for ms-auth" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="ms-auth" />
+      </profile>
+      <profile name="Annotation profile for ms-ticket" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
         <module name="ms-persona" />
         <module name="ms-diagnostico" />
-        <module name="ms-auth" />
         <module name="ms-notificaciones" />
         <module name="ms-ticket" />
         <module name="ms-pagos" />
