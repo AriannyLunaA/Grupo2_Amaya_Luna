@@ -18,7 +18,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="ms-persona" />
         <module name="ms-diagnostico" />
         <module name="ms-notificaciones" />
         <module name="ms-ticket" />
@@ -26,13 +25,14 @@
         <module name="ms-auditoria" />
         <module name="ms-inventario" />
       </profile>
-      <profile name="Annotation profile for ms-equipos" enabled="true">
+      <profile name="Annotation profile for ms-persona" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="ms-persona" />
         <module name="ms-equipos" />
         <module name="ms-auth" />
       </profile>
