@@ -42,7 +42,7 @@ class MsAuthApplicationTests {
 	}
 
 	@Test
-	@DisplayName("Integridad: Obtención masiva de usuarios del sistema")
+	@DisplayName("Integridad: obtención de usuarios del sistema")
 	void checkListaUsuarios() {
 		List<UsuarioCredencial> usuarios = servicio.listarTodos();
 		log.info("Validando carga de la tabla de credenciales");
