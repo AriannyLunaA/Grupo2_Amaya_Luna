@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 @Service
 @Slf4j
 public class PagoService {
@@ -27,7 +26,7 @@ public class PagoService {
         return pagoRepository.findAll();
     }
 
-    public Pago buscarPagoPorId(Integer idPago) {
+    public Pago buscarPagoPorId(Long idPago) {
         log.info("buscando pago con id: {}", idPago);
         return pagoRepository.findById(idPago).orElse(null);
     }

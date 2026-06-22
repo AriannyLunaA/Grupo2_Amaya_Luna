@@ -42,7 +42,7 @@ public class PagoController {
     @Operation(summary = "Buscar pago por ID", description = "Retorna un registro de pago específico según su ID")
     @ApiResponse(responseCode = "200", description = "Pago encontrado exitosamente")
     @ApiResponse(responseCode = "404", description = "No se encontró un pago con el ID proporcionado")
-    public ResponseEntity<Pago> buscarPagoPorId(@Parameter(description = "ID del pago a consultar") @PathVariable Integer id) {
+    public ResponseEntity<Pago> buscarPagoPorId(@Parameter(description = "ID del pago a consultar") @PathVariable Long id) {
         log.info("GET solicitado en /api/v1/pagos/{}", id);
         Pago pagoBuscado = pagoService.buscarPagoPorId(id);
         if (pagoBuscado != null) {

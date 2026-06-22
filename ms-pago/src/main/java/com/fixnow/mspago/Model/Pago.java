@@ -20,7 +20,7 @@ public class Pago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pago")
-    private Integer idPago;
+    private Long idPago;
 
     @NotNull(message = "el id del ticket es obligatorio")
     @Positive(message = "el id del ticket debe ser un número positivo")

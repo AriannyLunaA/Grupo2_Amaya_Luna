@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PagoRepository extends JpaRepository<Pago, Integer> {
+public interface PagoRepository extends JpaRepository<Pago, Long> {
 
     List<Pago> findByIdTicket(Long idTicket);
 }
