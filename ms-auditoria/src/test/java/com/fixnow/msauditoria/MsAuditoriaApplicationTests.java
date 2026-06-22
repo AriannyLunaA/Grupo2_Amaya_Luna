@@ -23,8 +23,8 @@ class MsAuditoriaApplicationTests {
 
     @Test
     @DisplayName("Regla de Negocio: Todo registro debe referenciar al menos a una entidad (Ticket, Pago o Persona)")
-    void verificarAsociacionEntidad() {
-        Auditoria auditoria = auditoriaService.buscarPorId(1);
+    void checkAsociacionEntidad() {
+        Auditoria auditoria = auditoriaService.buscarPorId(1L);
         log.info("Revisando referencias de entidades para la auditoria ID 1");
 
         // Un log sin IDs no sirve para trazabilidad. Exigimos que al menos uno venga con datos.
@@ -37,8 +37,8 @@ class MsAuditoriaApplicationTests {
 
     @Test
     @DisplayName("Regla de Negocio: Los detalles del evento deben tener una longitud mínima descriptiva")
-    void verificarDetallesDescriptivosMinimos() {
-        Auditoria auditoria = auditoriaService.buscarPorId(1);
+    void checkDetallesDescriptivosMinimos() {
+        Auditoria auditoria = auditoriaService.buscarPorId(1L);
         log.info("Revisando longitud y calidad de los detalles para auditoria ID 1");
 
         // Evitamos registros basura como "ok" o ".". Exigimos un mínimo de 15 caracteres de contexto.
@@ -47,8 +47,8 @@ class MsAuditoriaApplicationTests {
 
     @Test
     @DisplayName("Regla de Negocio: Consistencia entre la acción PAGO_PROCESADO y su ID asociado")
-    void verificarContextoDePago() {
-        Auditoria auditoria = auditoriaService.buscarPorId(2);
+    void checkContextoPago() {
+        Auditoria auditoria = auditoriaService.buscarPorId(2L);
         log.info("Revisando consistencia contextual para la auditoria ID 2 con accion: {}", auditoria.getAccion());
 
         // Si la acción registrada indica que se procesó un pago, el idPago no puede ser nulo bajo ninguna circunstancia

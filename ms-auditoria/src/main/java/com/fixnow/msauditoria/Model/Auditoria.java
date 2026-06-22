@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
 @Entity
 @Table(name = "auditoria")
 @Data
@@ -20,13 +19,13 @@ public class Auditoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_auditoria")
-    private Integer idAuditoria;
+    private Long idAuditoria;
 
     @Column(name = "id_ticket")
     private Long idTicket;
 
     @Column(name = "id_pago")
-    private Integer idPago;
+    private Long idPago;
 
     @Column(name = "id_persona")
     private Long idPersona;

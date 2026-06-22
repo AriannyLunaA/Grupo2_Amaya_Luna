@@ -20,18 +20,17 @@ public class AuditoriaService {
         return auditoriaRepository.findAll();
     }
 
-    public Auditoria buscarPorId(Integer id) {
+    public Auditoria buscarPorId(Long id) {
         return auditoriaRepository.findById(id).orElse(null);
     }
 
-    public List<Auditoria> buscarPorTicket(long idTicket) {
+    public List<Auditoria> buscarPorTicket(Long idTicket) {
         return auditoriaRepository.findByIdTicket(idTicket);
     }
 
     public boolean registrarAuditoria(Auditoria auditoria) {
         try {
             log.info("iniciando persistencia de log de auditoría para la acción: {}", auditoria.getAccion());
-
 
             auditoria.setFecha(LocalDateTime.now());
 

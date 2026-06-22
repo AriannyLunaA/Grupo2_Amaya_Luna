@@ -42,7 +42,7 @@ public class AuditoriaController {
     @Operation(summary = "Buscar registro por ID", description = "Retorna un evento de auditoría específico según su ID")
     @ApiResponse(responseCode = "200", description = "Registro encontrado exitosamente")
     @ApiResponse(responseCode = "404", description = "No se encontró un registro con el ID proporcionado")
-    public ResponseEntity<Auditoria> buscarPorId(@Parameter(description = "ID del registro de auditoría a consultar") @PathVariable Integer id) {
+    public ResponseEntity<Auditoria> buscarPorId(@Parameter(description = "ID del registro de auditoría a consultar") @PathVariable Long id) {
         log.info("GET solicitado en /api/v1/auditoria/{}", id);
         Auditoria auditoria = auditoriaService.buscarPorId(id);
         if (auditoria != null) {
@@ -56,7 +56,7 @@ public class AuditoriaController {
     @Operation(summary = "Buscar auditoría por ID de Ticket", description = "Retorna todos los eventos y acciones asociadas a un ticket específico")
     @ApiResponse(responseCode = "200", description = "Consulta exitosa, se entrega la lista de eventos del ticket")
     @ApiResponse(responseCode = "204", description = "Consulta exitosa, pero el ticket no tiene eventos registrados")
-    public ResponseEntity<List<Auditoria>> buscarPorTicket(@Parameter(description = "ID del ticket para consultar su historial de eventos") @PathVariable Integer idTicket) {
+    public ResponseEntity<List<Auditoria>> buscarPorTicket(@Parameter(description = "ID del ticket para consultar su historial de eventos") @PathVariable Long idTicket) {
         log.info("GET solicitado en /api/v1/auditoria/ticket/{}", idTicket);
         List<Auditoria> lista = auditoriaService.buscarPorTicket(idTicket);
         if (lista.isEmpty()) {

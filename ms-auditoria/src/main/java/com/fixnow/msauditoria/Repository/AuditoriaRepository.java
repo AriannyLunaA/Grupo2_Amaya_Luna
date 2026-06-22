@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AuditoriaRepository extends JpaRepository<Auditoria, Integer> {
+public interface AuditoriaRepository extends JpaRepository<Auditoria, Long> {
 
     List<Auditoria> findByIdTicket(Long idTicket);
 
-    List<Auditoria> findByIdPago(Integer idPago);
+    List<Auditoria> findByIdPago(Long idPago);
 
     List<Auditoria> findByIdPersona(Long idPersona);
 }
