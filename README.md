@@ -101,3 +101,16 @@ para garantizar la carga correcta del contexto de Spring Boot.
 2. Estandarización del código de pruebas aplicando convenciones de legibilidad (@DisplayName),
 trazabilidad (@Slf4j), y aislamiento de estado mediante ejecución transaccional con rollback automático 
 (@Transactional).
+
+**Actualizaciones de Infraestructura y QA (ms-diagnostico y ms-ticket)
+Estabilización de Entornos:**
+
+Corrección de la infraestructura de pruebas para ms-diagnostico y ms-ticket,
+asegurando el uso de perfiles test independientes.
+
+Creación de esquemas de base de datos dedicados (fixnow_diagnostico_test, fixnow_tickets_test).
+
+Implementación de pruebas unitarias en DiagnosticoRepositoryTest cubriendo: persistencia exitosa,
+validaciones @NotNull (campo estado) y restricciones de longitud (@Size).
+Ajuste de modelos y DTOs para cumplir con las reglas de negocio técnicas del sistema.
+
