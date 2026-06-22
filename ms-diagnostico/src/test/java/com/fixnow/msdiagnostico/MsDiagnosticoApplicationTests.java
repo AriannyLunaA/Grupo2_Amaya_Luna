@@ -60,7 +60,7 @@ class DiagnosticoRepositoryTest {
         diagnosticoInvalido.setNecesitaRepuesto(false);
         diagnosticoInvalido.setCostoEstimado(0);
         diagnosticoInvalido.setTiempoEstimadoDias(0);
-        diagnosticoInvalido.setEstado("Estado excedido en la cantidad de caracteres");
+        diagnosticoInvalido.setEstado("Estado excedido en la cantidad de caracteres ******************************************");
 
         assertThrows(Exception.class, () -> diagnosticoRepository.save(diagnosticoInvalido),
                 "El sistema debe rechazar estados que excedan el límite de caracteres");
