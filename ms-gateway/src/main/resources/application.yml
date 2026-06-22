@@ -58,3 +58,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+# Gateway-debug
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
