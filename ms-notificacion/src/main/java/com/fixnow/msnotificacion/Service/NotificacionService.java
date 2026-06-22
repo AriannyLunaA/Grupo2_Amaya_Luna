@@ -31,7 +31,7 @@ public class NotificacionService {
         return notificacionRepository.findAll();
     }
 
-    public Notificacion buscarPorId(Integer id) {
+    public Notificacion buscarPorId(Long id) {
         return notificacionRepository.findById(id).orElse(null);
     }
 
@@ -39,18 +39,15 @@ public class NotificacionService {
         return notificacionRepository.findByIdTicket(idTicket);
     }
 
-
     public boolean enviarNotificacion(Notificacion notificacion) {
         try {
             log.info("Iniciando proceso de notificación para el Ticket ID: {}", notificacion.getIdTicket());
 
-
-            TicketDTO ticket = ticketClient.getTicketById(Long.valueOf(notificacion.getIdTicket()));
+            TicketDTO ticket = ticketClient.getTicketById(notificacion.getIdTicket());
             if (ticket == null || ticket.getIdPersona() == null) {
                 log.warn("El ticket ID {} no existe o no tiene un cliente asociado.", notificacion.getIdTicket());
                 return false;
             }
-
 
             PersonaDTO persona = personaClient.getPersonaById(ticket.getIdPersona());
             if (persona == null || persona.getCorreo() == null) {
@@ -58,10 +55,8 @@ public class NotificacionService {
                 return false;
             }
 
-
             notificacion.setCorreoDestino(persona.getCorreo());
             notificacion.setFechaEnvio(LocalDateTime.now());
-
 
             notificacionRepository.save(notificacion);
             log.info("Notificación guardada y enviada con éxito al correo: {}", persona.getCorreo());

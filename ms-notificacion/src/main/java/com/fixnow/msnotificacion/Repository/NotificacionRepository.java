@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface NotificacionRepository extends JpaRepository<Notificacion, Integer> {
+public interface NotificacionRepository extends JpaRepository<Notificacion, Long> {
 
-    List<Notificacion> findByIdTicket(long idTicket);
+    List<Notificacion> findByIdTicket(Long idTicket);
 }

@@ -42,7 +42,7 @@ public class NotificacionController {
     @Operation(summary = "Buscar notificación por ID", description = "Retorna un registro de notificación específico según su ID")
     @ApiResponse(responseCode = "200", description = "Notificación encontrada exitosamente")
     @ApiResponse(responseCode = "404", description = "No se encontró una notificación con el ID proporcionado")
-    public ResponseEntity<Notificacion> buscarPorId(@Parameter(description = "ID de la notificación a consultar") @PathVariable Integer id) {
+    public ResponseEntity<Notificacion> buscarPorId(@Parameter(description = "ID de la notificación a consultar") @PathVariable Long id) {
         log.info("GET solicitado en /api/v1/notificaciones/{}", id);
         Notificacion buscada = notificacionService.buscarPorId(id);
         if (buscada != null) {

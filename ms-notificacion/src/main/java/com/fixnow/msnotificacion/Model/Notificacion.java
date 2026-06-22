@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
 @Entity
 @Table(name = "notificacion")
 @Data
@@ -21,13 +20,12 @@ public class Notificacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_notificacion")
-    private Integer idNotificacion;
+    private Long idNotificacion;
 
     @NotNull(message = "el id del ticket es obligatorio")
     @Positive(message = "el id del ticket debe ser un número positivo")
     @Column(name = "id_ticket", nullable = false)
-    private long idTicket;
-
+    private Long idTicket;
 
     @Column(name = "correo_destino", nullable = false, length = 100)
     private String correoDestino;
