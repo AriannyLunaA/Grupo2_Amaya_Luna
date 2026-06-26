@@ -71,6 +71,7 @@ public class DiagnosticoService {
         diagnostico.setCantidadRepuesto(dto.getCantidadRepuesto());
         diagnostico.setCostoEstimado(dto.getCostoEstimado());
         diagnostico.setTiempoEstimadoDias(dto.getTiempoEstimadoDias());
+        diagnostico.setEstado(dto.getEstado());
 
         Diagnostico guardado = repository.save(diagnostico);
 
@@ -97,6 +98,7 @@ public class DiagnosticoService {
         dto.setCantidadRepuesto(diagnostico.getCantidadRepuesto());
         dto.setCostoEstimado(diagnostico.getCostoEstimado());
         dto.setTiempoEstimadoDias(diagnostico.getTiempoEstimadoDias());
+        dto.setEstado(diagnostico.getEstado());
         return dto;
     }
 }
