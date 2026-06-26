@@ -70,11 +70,10 @@ public class AuthService {
         return repository.findAll();
     }
 
-    /*ignore esto profesor, es lo que hicimos en la prueba el lunes
+    // Lunes 25-05: Defensa Técnica Evaluación 2 - Requerimiento del docente (JesusAmayap): Consumir la búsqueda del repositorio e implementar el servicio para listar los usuarios según su rol.
     public List<UsuarioCredencial> findByRol(String rol) {
         log.info("obteniendo los usuarios por rol registrados en la bdd");
         return repository.findByRol(rol);
     }
-    */
 
 }

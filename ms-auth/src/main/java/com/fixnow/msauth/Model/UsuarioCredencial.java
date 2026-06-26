@@ -18,8 +18,9 @@ public class UsuarioCredencial {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Lunes 25-05: Defensa Técnica Evaluación 2 - Requerimiento del docente (AriannyLunaA): Agregar un mínimo de 5 caracteres permitidos al nombre de usuario.
     @NotNull(message = "el nombre de usuario es obligatorio")
-    @Size(max = 255)
+    @Size(max = 255, min = 5)
     @Column(name = "username", nullable = false, unique = true)
     private String username;
 
