@@ -5,6 +5,7 @@ import com.fixnow.msauth.DTO.AuthResponseDTO;
 import com.fixnow.msauth.Model.UsuarioCredencial;
 import com.fixnow.msauth.Service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -56,6 +57,24 @@ public class AuthController {
             return ResponseEntity.noContent().build();
         } else {
             log.info("200: lista de usuarios enviada");
+            return ResponseEntity.ok(usuarios);
+        }
+    }
+
+    @GetMapping("/roles")
+    @Operation(summary = "buscar usuarios por rol", description = "obtiene una lista de usuarios filtrados por su rol asignado")
+    @ApiResponse(responseCode = "200", description = "lista de usuarios filtrados enviada correctamente")
+    @ApiResponse(responseCode = "204", description = "no se encontraron usuarios con el rol indicado")
+    public ResponseEntity<List<UsuarioCredencial>> buscarPorRol(@Parameter(description = "Rol del usuario a consultar (Ej: TECNICO, ADMIN)") @RequestParam String rol) {
+
+        log.info("GET recibido en /api/v1/auth/roles?rol={}", rol);
+        List<UsuarioCredencial> usuarios = authService.findByRol(rol);
+
+        if (usuarios.isEmpty()) {
+            log.warn("204: no hay usuarios registrados con el rol: {}", rol);
+            return ResponseEntity.noContent().build();
+        } else {
+            log.info("200: lista enviada para el rol: {}", rol);
             return ResponseEntity.ok(usuarios);
         }
     }
