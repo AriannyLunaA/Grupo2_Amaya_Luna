@@ -12,8 +12,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Documentacion API Persona")
-                        .version("3.5")
-                        .description("Glosario completo endpoints disponibles API Persona"));
+                        .title("Documentación API Personas")
+                        .version("1.0")
+                        .description("Glosario completo de endpoints disponibles para el microservicio de Personas"));
     }
 }

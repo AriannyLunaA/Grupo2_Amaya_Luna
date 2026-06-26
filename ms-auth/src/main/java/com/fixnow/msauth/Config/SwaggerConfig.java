@@ -12,8 +12,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Documentacion API Auth")
-                        .version("3.5")
-                        .description("Glosario completo endpoints disponibles API Auth"));
+                        .title("Documentación API Auth")
+                        .version("1.0")
+                        .description("Glosario completo de endpoints disponibles para el microservicio de Auth"));
     }
 }
