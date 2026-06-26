@@ -1,4 +1,4 @@
-package com.fixnow.ms_equipos.Model;
+package com.fixnow.msequipo.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

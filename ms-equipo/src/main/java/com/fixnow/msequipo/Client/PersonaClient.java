@@ -1,6 +1,6 @@
-package com.fixnow.ms_equipos.Client;
+package com.fixnow.msequipo.Client;
 
-import com.fixnow.ms_equipos.DTO.PersonaDTO;
+import com.fixnow.msequipo.DTO.PersonaDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

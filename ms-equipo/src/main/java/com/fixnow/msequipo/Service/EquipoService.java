@@ -1,10 +1,10 @@
-package com.fixnow.ms_equipos.Service;
+package com.fixnow.msequipo.Service;
 
-import com.fixnow.ms_equipos.Client.PersonaClient;
-import com.fixnow.ms_equipos.DTO.EquipoDTO;
-import com.fixnow.ms_equipos.DTO.PersonaDTO;
-import com.fixnow.ms_equipos.Model.Equipo;
-import com.fixnow.ms_equipos.Repository.EquipoRepository;
+import com.fixnow.msequipo.Client.PersonaClient;
+import com.fixnow.msequipo.DTO.EquipoDTO;
+import com.fixnow.msequipo.DTO.PersonaDTO;
+import com.fixnow.msequipo.Model.Equipo;
+import com.fixnow.msequipo.Repository.EquipoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

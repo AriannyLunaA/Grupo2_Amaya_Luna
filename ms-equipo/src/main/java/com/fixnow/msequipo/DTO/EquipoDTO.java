@@ -1,4 +1,4 @@
-package com.fixnow.ms_equipos.DTO;
+package com.fixnow.msequipo.DTO;
 
 import lombok.Data;
 

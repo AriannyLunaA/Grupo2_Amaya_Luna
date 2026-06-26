@@ -1,7 +1,7 @@
-package com.fixnow.ms_equipos.Controller;
+package com.fixnow.msequipo.Controller;
 
-import com.fixnow.ms_equipos.DTO.EquipoDTO;
-import com.fixnow.ms_equipos.Service.EquipoService;
+import com.fixnow.msequipo.DTO.EquipoDTO;
+import com.fixnow.msequipo.Service.EquipoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

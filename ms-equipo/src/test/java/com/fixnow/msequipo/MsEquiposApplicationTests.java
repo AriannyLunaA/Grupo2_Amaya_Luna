@@ -1,7 +1,7 @@
-package com.fixnow.ms_equipos;
+package com.fixnow.msequipo;
 
-import com.fixnow.ms_equipos.DTO.EquipoDTO;
-import com.fixnow.ms_equipos.Service.EquipoService;
+import com.fixnow.msequipo.DTO.EquipoDTO;
+import com.fixnow.msequipo.Service.EquipoService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
-package com.fixnow.ms_equipos.Repository;
+package com.fixnow.msequipo.Repository;
 
-import com.fixnow.ms_equipos.Model.Equipo;
+import com.fixnow.msequipo.Model.Equipo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
