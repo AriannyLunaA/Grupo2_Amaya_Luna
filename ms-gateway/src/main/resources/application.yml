@@ -19,7 +19,7 @@ spring:
               uri: lb://ms-auth
               predicates:
                 - Path=/api/v1/auth/**
-            - id: ms-personas
+            - id: ms-persona
               uri: lb://ms-persona
               predicates:
                 - Path=/api/v1/personas/**
