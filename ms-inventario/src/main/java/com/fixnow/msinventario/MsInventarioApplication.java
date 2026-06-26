@@ -1,4 +1,4 @@
-package com.fixnow.ms_inventario;
+package com.fixnow.msinventario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.fixnow.ms_inventario;
+package com.fixnow.msinventario;
 
-import com.fixnow.ms_inventario.Model.Repuesto;
-import com.fixnow.ms_inventario.Service.RepuestoService;
+import com.fixnow.msinventario.Model.Repuesto;
+import com.fixnow.msinventario.Service.RepuestoService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,7 @@
-package com.fixnow.ms_inventario.Controller;
+package com.fixnow.msinventario.Controller;
 
-import com.fixnow.ms_inventario.Model.Repuesto;
-import com.fixnow.ms_inventario.Service.RepuestoService;
+import com.fixnow.msinventario.Model.Repuesto;
+import com.fixnow.msinventario.Service.RepuestoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

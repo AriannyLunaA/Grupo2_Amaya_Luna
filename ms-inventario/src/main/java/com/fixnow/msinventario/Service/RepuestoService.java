@@ -1,7 +1,7 @@
-package com.fixnow.ms_inventario.Service;
+package com.fixnow.msinventario.Service;
 
-import com.fixnow.ms_inventario.Model.Repuesto;
-import com.fixnow.ms_inventario.Repository.RepuestoRepository;
+import com.fixnow.msinventario.Model.Repuesto;
+import com.fixnow.msinventario.Repository.RepuestoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

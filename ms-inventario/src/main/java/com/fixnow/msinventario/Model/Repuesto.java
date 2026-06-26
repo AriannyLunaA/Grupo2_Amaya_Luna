@@ -1,4 +1,4 @@
-package com.fixnow.ms_inventario.Model;
+package com.fixnow.msinventario.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;

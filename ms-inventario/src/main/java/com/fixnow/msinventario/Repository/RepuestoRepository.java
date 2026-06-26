@@ -1,6 +1,6 @@
-package com.fixnow.ms_inventario.Repository;
+package com.fixnow.msinventario.Repository;
 
-import com.fixnow.ms_inventario.Model.Repuesto;
+import com.fixnow.msinventario.Model.Repuesto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
