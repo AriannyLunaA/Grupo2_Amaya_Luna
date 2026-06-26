@@ -1,10 +1,9 @@
-package com.fixnow.ms_auth.Repository;
+package com.fixnow.msauth.Repository;
 
-import com.fixnow.ms_auth.Model.UsuarioCredencial;
+import com.fixnow.msauth.Model.UsuarioCredencial;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository

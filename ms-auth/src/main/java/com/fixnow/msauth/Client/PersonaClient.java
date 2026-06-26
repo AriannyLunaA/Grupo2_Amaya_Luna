@@ -1,6 +1,6 @@
-package com.fixnow.ms_auth.Client;
+package com.fixnow.msauth.Client;
 
-import com.fixnow.ms_auth.DTO.PersonaDTO;
+import com.fixnow.msauth.DTO.PersonaDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

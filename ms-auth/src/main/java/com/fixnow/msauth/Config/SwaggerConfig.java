@@ -1,4 +1,4 @@
-package com.fixnow.ms_auth.Config;
+package com.fixnow.msauth.Config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

@@ -1,11 +1,11 @@
-package com.fixnow.ms_auth.Service;
+package com.fixnow.msauth.Service;
 
-import com.fixnow.ms_auth.Client.PersonaClient;
-import com.fixnow.ms_auth.DTO.AuthRequestDTO;
-import com.fixnow.ms_auth.DTO.AuthResponseDTO;
-import com.fixnow.ms_auth.DTO.PersonaDTO;
-import com.fixnow.ms_auth.Model.UsuarioCredencial;
-import com.fixnow.ms_auth.Repository.UsuarioCredencialRepository;
+import com.fixnow.msauth.Client.PersonaClient;
+import com.fixnow.msauth.DTO.AuthRequestDTO;
+import com.fixnow.msauth.DTO.AuthResponseDTO;
+import com.fixnow.msauth.DTO.PersonaDTO;
+import com.fixnow.msauth.Model.UsuarioCredencial;
+import com.fixnow.msauth.Repository.UsuarioCredencialRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

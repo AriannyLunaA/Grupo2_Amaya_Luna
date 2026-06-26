@@ -1,7 +1,7 @@
-package com.fixnow.ms_auth;
+package com.fixnow.msauth;
 
-import com.fixnow.ms_auth.Service.AuthService;
-import com.fixnow.ms_auth.Model.UsuarioCredencial;
+import com.fixnow.msauth.Service.AuthService;
+import com.fixnow.msauth.Model.UsuarioCredencial;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.fixnow.ms_auth.DTO;
+package com.fixnow.msauth.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

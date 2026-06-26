@@ -1,4 +1,4 @@
-package com.fixnow.ms_auth.Model;
+package com.fixnow.msauth.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

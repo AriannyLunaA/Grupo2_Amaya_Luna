@@ -1,9 +1,9 @@
-package com.fixnow.ms_auth.Controller;
+package com.fixnow.msauth.Controller;
 
-import com.fixnow.ms_auth.DTO.AuthRequestDTO;
-import com.fixnow.ms_auth.DTO.AuthResponseDTO;
-import com.fixnow.ms_auth.Model.UsuarioCredencial;
-import com.fixnow.ms_auth.Service.AuthService;
+import com.fixnow.msauth.DTO.AuthRequestDTO;
+import com.fixnow.msauth.DTO.AuthResponseDTO;
+import com.fixnow.msauth.Model.UsuarioCredencial;
+import com.fixnow.msauth.Service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
