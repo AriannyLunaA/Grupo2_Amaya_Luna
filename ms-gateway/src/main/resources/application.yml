@@ -27,7 +27,7 @@ spring:
               uri: lb://ms-equipo
               predicates:
                 - Path=/api/v1/equipo/**
-            - id: ms-tickets
+            - id: ms-ticket
               uri: lb://ms-ticket
               predicates:
                 - Path=/api/v1/ticket/**
