@@ -19,7 +19,7 @@ spring:
               uri: lb://ms-auth
               predicates:
                 - Path=/api/v1/auth/**
-            - id: ms-personas
+            - id: ms-persona
               uri: lb://ms-persona
               predicates:
                 - Path=/api/v1/personas/**
@@ -27,7 +27,7 @@ spring:
               uri: lb://ms-equipo
               predicates:
                 - Path=/api/v1/equipo/**
-            - id: ms-tickets
+            - id: ms-ticket
               uri: lb://ms-ticket
               predicates:
                 - Path=/api/v1/ticket/**
@@ -35,12 +35,12 @@ spring:
               uri: lb://ms-diagnostico
               predicates:
                 - Path=/api/v1/diagnostico/**
-            - id: ms-pagos
-              uri: lb://ms-pagos
+            - id: ms-pago
+              uri: lb://ms-pago
               predicates:
                 - Path=/api/v1/pagos/**
-            - id: ms-notificaciones
-              uri: lb://ms-notificaciones
+            - id: ms-notificacion
+              uri: lb://ms-notificacion
               predicates:
                 - Path=/api/v1/notificaciones/**
             - id: ms-auditoria
@@ -58,3 +58,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+# Gateway-debug
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

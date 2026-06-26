@@ -22,7 +22,7 @@ public class Persona {
     private Long idPersona;
 
     @NotNull(message = "el rut es obligatorio")
-    @Size(max = 20)
+    @Size(max = 12)
     private String rut;
 
     @NotNull(message = "los nombres son obligatorios")

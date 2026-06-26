@@ -12,4 +12,5 @@ public class DiagnosticoDTO {
     private Integer tiempoEstimadoDias;
     private Integer idRepuesto;
     private Integer cantidadRepuesto;
+    private String estado;
 }

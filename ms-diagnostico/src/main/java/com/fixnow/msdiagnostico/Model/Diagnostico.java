@@ -45,4 +45,9 @@ public class Diagnostico {
 
     @Column(name = "cantidad_repuesto")
     private Integer cantidadRepuesto;
+
+    @NotNull(message = "el estado es obligatorio")
+    @Size(max = 50)
+    @Column(name = "estado")
+    private String estado;
 }
