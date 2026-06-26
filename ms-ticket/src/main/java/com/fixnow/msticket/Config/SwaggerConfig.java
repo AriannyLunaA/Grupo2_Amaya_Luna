@@ -11,10 +11,9 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Api Ticket")
+                        .title("Documentación API Tickets")
                         .version("1.0")
-                        .description("Documentación Api Ticket")
+                        .description("Glosario completo de endpoints disponibles para el microservicio de Tickets")
                 );
-
     }
 }

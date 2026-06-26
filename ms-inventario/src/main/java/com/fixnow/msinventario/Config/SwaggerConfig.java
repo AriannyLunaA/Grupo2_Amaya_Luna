@@ -11,9 +11,9 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                .title("Api Inventario")
-                .version("1.0")
-                .description("Documentación Api Inventario")
+                        .title("Documentación API Inventario")
+                        .version("1.0")
+                        .description("Glosario completo de endpoints disponibles para el microservicio de Inventario")
                 );
     }
 }

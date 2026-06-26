@@ -11,10 +11,9 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Api Diagnostico")
+                        .title("Documentación API Diagnósticos")
                         .version("1.0")
-                        .description("Documentación Api Diagnostico")
+                        .description("Glosario completo de endpoints disponibles para el microservicio de Diagnósticos")
                 );
-
     }
 }
