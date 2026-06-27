@@ -8,7 +8,7 @@ CREATE TABLE usuarios_credenciales (
 
 
 INSERT INTO usuarios_credenciales (username, password, rol, perfil_id)
-VALUES ('admin', '123', 'ADMIN', 1);
+VALUES ('admin', '123jesusdavidamayapastran', 'ADMIN', 1);
 
 INSERT INTO usuarios_credenciales (username, password, rol, perfil_id)
 VALUES ('tecnico1', '456', 'TECNICO', 1);
