@@ -35,12 +35,12 @@ spring:
               uri: lb://ms-diagnostico
               predicates:
                 - Path=/api/v1/diagnostico/**
-            - id: ms-pagos
-              uri: lb://ms-pagos
+            - id: ms-pago
+              uri: lb://ms-pago
               predicates:
                 - Path=/api/v1/pagos/**
-            - id: ms-notificaciones
-              uri: lb://ms-notificaciones
+            - id: ms-notificacion
+              uri: lb://ms-notificacion
               predicates:
                 - Path=/api/v1/notificaciones/**
             - id: ms-auditoria

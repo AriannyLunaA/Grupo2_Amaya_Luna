@@ -1,7 +1,7 @@
 CREATE TABLE auditoria (
-                           id_auditoria INT AUTO_INCREMENT PRIMARY KEY,
+                           id_auditoria BIGINT AUTO_INCREMENT PRIMARY KEY,
                            id_ticket BIGINT NULL,
-                           id_pago INT NULL,
+                           id_pago BIGINT NULL,
                            id_persona BIGINT NULL,
                            accion VARCHAR(100) NOT NULL, -- Ej: 'TICKET_CREADO', 'PAGO_PROCESADO', 'PERSONA_ELIMINADA'
                            detalles VARCHAR(255) NOT NULL,

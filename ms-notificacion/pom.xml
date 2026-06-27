@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fixnow</groupId>
-    <artifactId>ms-auditoria</artifactId>
+    <artifactId>ms-notificacion</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ms-auditoria</name>
-    <description>ms-auditoria</description>
+    <name>ms-notificacion</name>
+    <description>ms-notificacion</description>
     <url/>
     <licenses>
         <license/>
@@ -91,6 +91,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-flyway</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-mysql</artifactId>
@@ -100,6 +101,7 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>3.0.2</version>
         </dependency>
+
 
     </dependencies>
     <dependencyManagement>
